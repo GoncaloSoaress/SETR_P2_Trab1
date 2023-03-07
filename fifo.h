@@ -15,8 +15,8 @@ struct MYFIFO {
     CONTENT array[FIFO_SIZE];
 };
 
-void myFIFOInit();
-void myFIFOInsert(uint32_t val);
-void myFIFORemove();
-uint32_t myFIFOPeep();
-uint32_t myFIFOSize();
+void myFIFOInit(struct MYFIFO *fifo);
+void myFIFOInsert(struct MYFIFO *fifo, uint32_t val);
+void myFIFORemove(struct MYFIFO *fifo);
+uint32_t myFIFOPeep(struct MYFIFO *fifo);
+uint32_t myFIFOSize(struct MYFIFO *fifo);
