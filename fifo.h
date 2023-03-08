@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <stdint.h>
 
+#ifndef FIFO_H
+#define FIFO_H
+
 #define FIFO_SIZE 10
 
 struct CONTENT {
@@ -17,6 +20,8 @@ struct MYFIFO {
 
 void myFIFOInit(struct MYFIFO *fifo);
 void myFIFOInsert(struct MYFIFO *fifo, uint32_t val);
-void myFIFORemove(struct MYFIFO *fifo);
+uint32_t myFIFORemove(struct MYFIFO *fifo);
 uint32_t myFIFOPeep(struct MYFIFO *fifo);
 uint32_t myFIFOSize(struct MYFIFO *fifo);
+
+#endif
