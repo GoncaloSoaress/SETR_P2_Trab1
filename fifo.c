@@ -25,7 +25,6 @@ uint32_t myFIFORemove(struct MYFIFO *fifo) {
     return rval;
 }
 
-
 uint32_t myFIFOPeep(struct MYFIFO *fifo){
     return fifo->array[fifo->out_p].value;
 }

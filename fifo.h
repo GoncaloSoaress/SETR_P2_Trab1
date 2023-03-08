@@ -28,7 +28,6 @@ struct CONTENT {
     uint32_t value; /**< Value of the FIFO position */
 };
 
-
 /**
  * @brief This structure contains all the variables needed to implement a FIFO structure.
  */
@@ -61,8 +60,6 @@ void myFIFOInsert(struct MYFIFO *fifo, uint32_t val);
  * @return The value of the oldest element in the FIFO structure. (uint32_t)
  */
 uint32_t myFIFORemove(struct MYFIFO *fifo);
-
-
 
 /**
  * @brief This function returns the oldest element from the FIFO structure, but does not
