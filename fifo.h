@@ -21,7 +21,7 @@
 #define FIFO_SIZE 10
 
 /**
- * @brief This struture contains the value to store in FIFO position 
+ * @brief This struture contains the value to store in FIFO position.
  *
  */ 
 struct CONTENT {
@@ -30,6 +30,7 @@ struct CONTENT {
 
 /**
  * @brief This structure contains all the variables needed to implement a FIFO structure.
+ * 
  */
 struct MYFIFO {
     uint32_t cnt;                   /**<Number of elements in the FIFO structure.*/
@@ -49,7 +50,7 @@ void myFIFOInit(struct MYFIFO *fifo);
  * @brief This function adds a value in FIFO structure.
  * 
  * @param fifo Pointer to the FIFO struture.
- * @param val Value to insert in the FIFO position
+ * @param val Value to insert in the FIFO position.
  */
 void myFIFOInsert(struct MYFIFO *fifo, uint32_t val);
 
@@ -57,16 +58,16 @@ void myFIFOInsert(struct MYFIFO *fifo, uint32_t val);
  * @brief This function removes the oldest element from the FIFO structure.
  * 
  * @param fifo Pointer to the FIFO structure.
- * @return The value of the oldest element in the FIFO structure. (uint32_t)
+ * @return The value of the oldest element in the FIFO structure. 
  */
 uint32_t myFIFORemove(struct MYFIFO *fifo);
 
 /**
  * @brief This function returns the oldest element from the FIFO structure, but does not
- * remove it
+ * remove it.
  * 
  * @param fifo Pointer to the FIFO struture.
- * @return The value of the oldest element in the FIFO structure. (uint32_t)
+ * @return The value of the oldest element in the FIFO structure. 
  */
 uint32_t myFIFOPeep(struct MYFIFO *fifo);
 
