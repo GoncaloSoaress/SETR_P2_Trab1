@@ -23,7 +23,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">SETR_P2 Assignment 1
    </div>
-   <div id="projectbrief">FIFOModuleDocumentation</div>
+   <div id="projectbrief">FIFO Module Documentation</div>
   </td>
  </tr>
  </tbody>
@@ -71,7 +71,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Definition of the struct data and the function prototype.  
+<p>Definition of the struct data and the function prototype for FIFO.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
@@ -80,6 +80,11 @@ $(function() {
 Include dependency graph for fifo.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="fifo_8h__incl.png" border="0" usemap="#fifo_8h" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="fifo_8h__dep__incl.png" border="0" usemap="#fifo_8hdep" alt=""/></div>
 </div>
 </div>
 <p><a href="fifo_8h_source.html">Go to the source code of this file.</a></p>
@@ -118,7 +123,7 @@ Functions</h2></td></tr>
 <tr class="separator:a545be93c8f87c573dbd316ee35dda76f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Definition of the struct data and the function prototype. </p>
+<div class="textblock"><p>Definition of the struct data and the function prototype for FIFO. </p>
 <p>Contains two data structures: one containing the necessary variables for creating a FIFO and another containing the content of each position from FIFO. It also contains 5 functions: <a class="el" href="fifo_8h.html#a2c64e18cd2c6d51db78207fe9f067a31" title="This function initializes the FIFO structure, setting all the variables to 0.">myFIFOInit()</a>, <a class="el" href="fifo_8h.html#ac6434a25778fc7f1ef034a43f211791c" title="This function adds a value in FIFO structure.">myFIFOInsert()</a>, <a class="el" href="fifo_8h.html#aeba6143357b346f56997136ae14ebd8d" title="This function removes the oldest element from the FIFO structure.">myFIFORemove()</a>, <a class="el" href="fifo_8h.html#a0470e49cc0283c05cb090127a1575550" title="This function returns the oldest element from the FIFO structure, but does not remove it.">myFIFOPeep()</a> and <a class="el" href="fifo_8h.html#a545be93c8f87c573dbd316ee35dda76f" title="This function returns the number of elements in the FIFO structure.">myFIFOSize()</a>.</p>
 <dl class="section author"><dt>Author</dt><dd>Gonçalo Soares &amp; Gonçalo Rodrigues </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>7 March 2023 </dd></dl>
@@ -238,6 +243,12 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The value of the oldest element in the FIFO structure. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">If</td><td>the FIFO is empty, the return value is equal to 9999. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

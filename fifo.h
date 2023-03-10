@@ -1,5 +1,5 @@
 /** @file fifo.h
- * @brief Definition of the struct data and the function prototype
+ * @brief Definition of the struct data and the function prototype for FIFO
  *  
  * Contains two data structures: one containing the necessary variables
  * for creating a FIFO and another containing the content of each position
@@ -58,7 +58,8 @@ void myFIFOInsert(struct MYFIFO *fifo, uint32_t val);
  * @brief This function removes the oldest element from the FIFO structure.
  * 
  * @param fifo Pointer to the FIFO structure.
- * @return The value of the oldest element in the FIFO structure. 
+ * @return The value of the oldest element in the FIFO structure.
+ * @exception If the FIFO is empty, the return value is equal to 9999. 
  */
 uint32_t myFIFORemove(struct MYFIFO *fifo);
 
