@@ -55,7 +55,8 @@ int main(void){
     // Size: 9
 
     for (int i=0; i<11;i++){
-        uint32_t flag = myFIFORemove(&fifo);
+        uint32_t rmVal = myFIFORemove(&fifo);
+        printf("Removed Value = %d\n",rmVal);
     }
 
 	return 0;

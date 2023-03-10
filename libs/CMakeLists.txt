@@ -8,5 +8,3 @@ set(LIB_TYPE STATIC)
 
 # Create the library
 add_library(FIFOLib ${LIB_TYPE} ${FIFO_SRCS})
-
-# Set compiler options for module

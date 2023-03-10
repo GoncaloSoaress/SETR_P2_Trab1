@@ -24,7 +24,3 @@ target_link_libraries(FIFO_Module PUBLIC ${EXTRA_LIBS})
 
 # Specifies include directories to use when compiling a given target
 target_include_directories(FIFO_Module PUBLIC ${EXTRA_INCLUDES})
-
-# Set compiler options for module
-
-	
