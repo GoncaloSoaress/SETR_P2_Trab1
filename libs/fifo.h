@@ -24,7 +24,7 @@
  * @brief This struture contains the value to store in FIFO position.
  *
  */ 
-struct CONTENT {
+struct VAL {
     uint32_t value; /**< Value of the FIFO position */
 };
 
@@ -36,7 +36,7 @@ struct MYFIFO {
     uint32_t cnt;                   /**<Number of elements in the FIFO structure.*/
     uint32_t in_p;                  /**<Pointer to the next position to insert an element in the FIFO structure.*/
     uint32_t out_p;                 /**<Pointer to the next position to remove an element from the FIFO structure.*/
-    CONTENT array[FIFO_SIZE];       /**<Array of elements in the FIFO structure of size FIFO_SIZE. This array itself is a structure of the CONTENT type.*/
+    struct VAL array[FIFO_SIZE];       /**<Array of elements in the FIFO structure of size FIFO_SIZE. This array itself is a structure of the CONTENT type.*/
 };
 
 /**

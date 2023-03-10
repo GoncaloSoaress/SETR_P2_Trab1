@@ -11,7 +11,7 @@ void myFIFOInit(struct MYFIFO *fifo) {
 
 void myFIFOInsert(struct MYFIFO *fifo, uint32_t val){
     if (fifo->cnt == FIFO_SIZE){
-        printf("FIFO Full! Removed oldest value:%d \n",myFIFORemove(fifo));
+        printf("FIFO Full! Removed oldest value: %d \n",myFIFORemove(fifo));
     }
     fifo->array[fifo->in_p].value = val;
     fifo->in_p = (fifo->in_p + 1) % FIFO_SIZE;
