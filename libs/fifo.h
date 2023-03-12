@@ -25,7 +25,8 @@
  *
  */ 
 struct VAL {
-    uint32_t value; /**< Value of the FIFO position */
+    uint32_t value;         /**< Value of the FIFO position */
+    uint32_t priority;      /**< Priority of the FIFO position */
 };
 
 /**
@@ -34,8 +35,8 @@ struct VAL {
  */
 struct MYFIFO {
     uint32_t cnt;                   /**<Number of elements in the FIFO structure.*/
-    uint32_t in_p;                  /**<Pointer to the next position to insert an element in the FIFO structure.*/
-    uint32_t out_p;                 /**<Pointer to the next position to remove an element from the FIFO structure.*/
+    //uint32_t in_p;                  /**<Pointer to the next position to insert an element in the FIFO structure.*/
+    //uint32_t out_p;                 /**<Pointer to the next position to remove an element from the FIFO structure.*/
     struct VAL array[FIFO_SIZE];       /**<Array of elements in the FIFO structure of size FIFO_SIZE. This array itself is a structure of the CONTENT type.*/
 };
 
@@ -51,8 +52,9 @@ void myFIFOInit(struct MYFIFO *fifo);
  * 
  * @param fifo Pointer to the FIFO struture.
  * @param val Value to insert in the FIFO position.
+ * @param priority Priority of the FIFO position.
  */
-void myFIFOInsert(struct MYFIFO *fifo, uint32_t val);
+void myFIFOInsert(struct MYFIFO *fifo, uint32_t val, uint32_t priority);
 
 /**
  * @brief This function removes the oldest element from the FIFO structure.
@@ -79,5 +81,12 @@ uint32_t myFIFOPeep(struct MYFIFO *fifo);
  * @return The number of elements in the FIFO structure. (uint32_t)
  */
 uint32_t myFIFOSize(struct MYFIFO *fifo);
+
+/**
+ * @brief This function prints the FIFO structure.
+ * 
+ * @param fifo Pointer to the FIFO structure.
+ */
+void myFIFOPrint(struct MYFIFO *fifo);
 
 #endif

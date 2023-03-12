@@ -27,37 +27,54 @@
 int main(void){
 	struct MYFIFO fifo;
 	
+    printf("---FIFO TEST---\nInitializing FIFO.\n");
     myFIFOInit(&fifo);
 	
+    printf("Adding 10 values to FIFO.\n");
     for (int i=0;i<10;i++){
-		myFIFOInsert(&fifo,i);
+		myFIFOInsert(&fifo,i,i);
 	}
-    // FIFO values: 0 1 2 3 4 5 6 7 8 9  
+    myFIFOPrint(&fifo);
 
-
+    printf("Peep inside the FIFO.\n");
     uint32_t oldest_val = myFIFOPeep (&fifo);
 	printf("Oldest Value = %d\n",oldest_val);
-    // FIFO Values: 0 1 2 3 4 5 6 7 8 9 
-    // Oldest Value: 0
+    myFIFOPrint(&fifo);
 
+    printf("Adding the value 99, with priority 99 to the FIFO while Full.\n");
     uint32_t add_value = 99;
-    myFIFOInsert(&fifo,add_value);
+    myFIFOInsert(&fifo,add_value,99);
     printf("Added Value = %d\n",add_value);
-    // FIFO values: 99 1 2 3 4 5 6 7 8 9 
+    myFIFOPrint(&fifo);
 
+    printf("Remove a value.\n");
 	uint32_t removed_val = myFIFORemove(&fifo);
 	printf("Removed Value = %d\n",removed_val);
-    // FIFO values: 99 _ 2 3 4 5 6 7 8 9 
+    myFIFOPrint(&fifo);
 
+    printf("Adding the value 100, with priority 2 to the FIFO.\n");
+    add_value = 100;
+    myFIFOInsert(&fifo,add_value,2);
+    printf("Added Value = %d\n", add_value);
+    myFIFOPrint(&fifo);
+
+    printf("Print Size.\n");
 	uint32_t size = myFIFOSize(&fifo);
 	printf("Size = %d\n",size);
-    // FIFO values: 99 _ 2 3 4 5 6 7 8 9 
-    // Size: 9
 
+    printf("Adding the value 0, with priority 0 to the FIFO.\n");
+    add_value = 0;
+    myFIFOInsert(&fifo,add_value,0);
+    printf("Added Value = %d\n",add_value);
+    myFIFOPrint(&fifo);
+
+    printf("Remove all values, even when the FIFO goes empty.\n");
     for (int i=0; i<11;i++){
         uint32_t rmVal = myFIFORemove(&fifo);
         printf("Removed Value = %d\n",rmVal);
     }
+
+    myFIFOPrint(&fifo);
 
 	return 0;
 }
