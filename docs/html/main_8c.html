@@ -74,7 +74,7 @@ $(function() {
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="fifo_8h_source.html">fifo.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fifo_8h_source.html">libs/fifo.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.c:</div>
 <div class="dyncontent">
@@ -91,7 +91,7 @@ Functions</h2></td></tr>
 <div class="textblock"><p>Test aplication for FIFO. </p>
 <p>Test aplication that use all functions and data structures created in <a class="el" href="fifo_8h.html" title="Definition of the struct data and the function prototype for FIFO.">fifo.h</a>.</p>
 <dl class="section author"><dt>Author</dt><dd>Gonçalo Soares &amp; Gonçalo Rodrigues </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>10 March 2022 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>12 March 2022 </dd></dl>
 <dl class="bug"><dt><b><a class="el" href="bug.html#_bug000002">Bug:</a></b></dt><dd>No known bugs. </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a840291bc02cba5474a4cb46a9b9566fe"></a>
@@ -111,7 +111,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Test aplication for FIFO. </p>
-<p>It create and initialize a fifo (myFIFOInit), insert four values in FIFO (myFIFOInsert) and remove the oldest value (myFIFORemove). It then prints the oldest value and the atual size from FIFO.</p>
+<p>The main code uses and tests all the functions developed for the <a class="el" href="fifo_8h.html" title="Definition of the struct data and the function prototype for FIFO.">fifo.h</a> module in order to be able to guarantee a good functioning of the module. These include initializing the FIFO (myFIFOInit), inserting values (myFIFOInsert), removing values (myFIFORemove), printing the next value to be removed (myFIFOPeep) and printing its contents (myFIFOPrint). <br  />
+</p>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="Test aplication for FIFO.">main()</a> always returns 0 </dd></dl>
 
 </div>

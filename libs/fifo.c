@@ -20,6 +20,7 @@ void myFIFOInsert(struct MYFIFO *fifo, uint32_t val, uint32_t priority){
         printf("FIFO Full! Removed oldest value: %d \n",myFIFORemove(fifo));
     }
 
+    /*Insertion when the FIFO is empty*/
     if(fifo->cnt == 0){
         fifo->array[0].value = val;
         fifo->array[0].priority = priority;
@@ -27,12 +28,15 @@ void myFIFOInsert(struct MYFIFO *fifo, uint32_t val, uint32_t priority){
         return;
     }
 
+
     for(uint32_t i = 0; i < fifo->cnt; i++){
         if(priority > fifo->array[i].priority){
+            
+            /*Shift values to right*/
             for(uint32_t j = fifo->cnt; j > i; j--){
                 fifo->array[j].value = fifo->array[j-1].value;
                 fifo->array[j].priority = fifo->array[j-1].priority;
-            }
+            }         
             fifo->array[i].value = val;
             fifo->array[i].priority = priority;
             fifo->cnt++;
@@ -40,6 +44,7 @@ void myFIFOInsert(struct MYFIFO *fifo, uint32_t val, uint32_t priority){
         }
     }
 
+    /*Insertion at the end of FIFO*/
     if(priority == fifo->array[fifo->cnt-1].priority){
         fifo->array[fifo->cnt].value = val;
         fifo->array[fifo->cnt].priority = priority;
@@ -56,11 +61,11 @@ uint32_t myFIFORemove(struct MYFIFO *fifo) {
 
     uint32_t rval = fifo->array[0].value;
 
+    /*Remove value and shift values to left*/
     for(uint32_t i = 0; i < fifo->cnt; i++){
         fifo->array[i].value = fifo->array[i+1].value;
         fifo->array[i].priority = fifo->array[i+1].priority;
     }
-
     fifo->cnt--;
     
     return rval;

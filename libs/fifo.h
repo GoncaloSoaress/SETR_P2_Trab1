@@ -3,11 +3,12 @@
  *  
  * Contains two data structures: one containing the necessary variables
  * for creating a FIFO and another containing the content of each position
- * from FIFO. It also contains 5 functions: myFIFOInit(), myFIFOInsert(),
- * myFIFORemove(), myFIFOPeep() and myFIFOSize().
+ * from FIFO. It also contains 6 functions: myFIFOInit(), myFIFOInsert(),
+void myFIFOPrint(struct MYFIFO *fifo);
+ * myFIFORemove(), myFIFOPeep(), myFIFOSize() and myFIFOPrint().
  * 
  * @author Gonçalo Soares & Gonçalo Rodrigues
- * @date 7 March 2023
+ * @date 12 March 2023
  * @bug No known bugs.
  */
 
@@ -21,7 +22,7 @@
 #define FIFO_SIZE 10
 
 /**
- * @brief This struture contains the value to store in FIFO position.
+ * @brief This struture contains the value and priority to store in FIFO position.
  *
  */ 
 struct VAL {
@@ -35,9 +36,7 @@ struct VAL {
  */
 struct MYFIFO {
     uint32_t cnt;                   /**<Number of elements in the FIFO structure.*/
-    //uint32_t in_p;                  /**<Pointer to the next position to insert an element in the FIFO structure.*/
-    //uint32_t out_p;                 /**<Pointer to the next position to remove an element from the FIFO structure.*/
-    struct VAL array[FIFO_SIZE];       /**<Array of elements in the FIFO structure of size FIFO_SIZE. This array itself is a structure of the CONTENT type.*/
+    struct VAL array[FIFO_SIZE];    /**<Array of elements in the FIFO structure of size FIFO_SIZE. This array itself is a structure of the CONTENT type.*/
 };
 
 /**
@@ -57,20 +56,20 @@ void myFIFOInit(struct MYFIFO *fifo);
 void myFIFOInsert(struct MYFIFO *fifo, uint32_t val, uint32_t priority);
 
 /**
- * @brief This function removes the oldest element from the FIFO structure.
+ * @brief This function removes the oldest element (high priority element) from the FIFO structure.
  * 
  * @param fifo Pointer to the FIFO structure.
- * @return The value of the oldest element in the FIFO structure.
+ * @return The value of the oldest element (high priority element) in the FIFO structure.
  * @exception If the FIFO is empty, the return value is equal to 9999. 
  */
 uint32_t myFIFORemove(struct MYFIFO *fifo);
 
 /**
- * @brief This function returns the oldest element from the FIFO structure, but does not
- * remove it.
+ * @brief This function returns the oldest element (high priority element) from 
+ * the FIFO structure, but does not remove it.
  * 
  * @param fifo Pointer to the FIFO struture.
- * @return The value of the oldest element in the FIFO structure. 
+ * @return The value of the oldest element (high priority element) in the FIFO structure. 
  */
 uint32_t myFIFOPeep(struct MYFIFO *fifo);
 
@@ -78,7 +77,7 @@ uint32_t myFIFOPeep(struct MYFIFO *fifo);
  * @brief This function returns the number of elements in the FIFO structure.
  * 
  * @param fifo Pointer to the FIFO structure.
- * @return The number of elements in the FIFO structure. (uint32_t)
+ * @return The number of elements in the FIFO structure. 
  */
 uint32_t myFIFOSize(struct MYFIFO *fifo);
 
