@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SETR_P2 Assignment 1: libs/fifo.h File Reference</title>
+<title>SETR_P2 Assignment 1: libs/fifo.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -67,85 +67,58 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">fifo.h File Reference</div>  </div>
+<div class="title">fifo.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Definition of the struct data and the function prototype for FIFO.  
+<p>Implementation of all FIFO functions.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="fifo_8h_source.html">fifo.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for fifo.h:</div>
+Include dependency graph for fifo.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="fifo_8h__incl.png" border="0" usemap="#libs_2fifo_8h" alt=""/></div>
-<map name="libs_2fifo_8h" id="libs_2fifo_8h">
-<area shape="rect" title="Definition of the struct data and the function prototype for FIFO." alt="" coords="91,5,173,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,72,107"/>
-<area shape="rect" title=" " alt="" coords="97,80,167,107"/>
-<area shape="rect" title=" " alt="" coords="191,80,262,107"/>
+<div class="center"><img src="fifo_8c__incl.png" border="0" usemap="#libs_2fifo_8c" alt=""/></div>
+<map name="libs_2fifo_8c" id="libs_2fifo_8c">
+<area shape="rect" title="Implementation of all FIFO functions." alt="" coords="99,5,181,32"/>
+<area shape="rect" title=" " alt="" coords="5,155,72,181"/>
+<area shape="rect" title=" " alt="" coords="97,155,167,181"/>
+<area shape="rect" title=" " alt="" coords="191,155,262,181"/>
+<area shape="rect" href="fifo_8h.html" title="Definition of the struct data and the function prototype for FIFO." alt="" coords="81,80,135,107"/>
 </map>
 </div>
-</div><div class="textblock"><div class="dynheader">
-This graph shows which files directly or indirectly include this file:</div>
-<div class="dyncontent">
-<div class="center"><img src="fifo_8h__dep__incl.png" border="0" usemap="#libs_2fifo_8hdep" alt=""/></div>
-<map name="libs_2fifo_8hdep" id="libs_2fifo_8hdep">
-<area shape="rect" title="Definition of the struct data and the function prototype for FIFO." alt="" coords="54,5,137,32"/>
-<area shape="rect" href="fifo_8c.html" title="Implementation of all FIFO functions." alt="" coords="5,80,87,107"/>
-<area shape="rect" href="main_8c.html" title="Test aplication for FIFO." alt="" coords="111,80,178,107"/>
-</map>
-</div>
-</div>
-<p><a href="fifo_8h_source.html">Go to the source code of this file.</a></p>
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structVAL.html">VAL</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This struture contains the value to store in FIFO position.  <a href="structVAL.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMYFIFO.html">MYFIFO</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This structure contains all the variables needed to implement a FIFO structure.  <a href="structMYFIFO.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a6092455278a1ac67204e0dbe08f9d13f"><td class="memItemLeft" align="right" valign="top"><a id="a6092455278a1ac67204e0dbe08f9d13f"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>FIFO_SIZE</b>&#160;&#160;&#160;10</td></tr>
-<tr class="separator:a6092455278a1ac67204e0dbe08f9d13f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
+</div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a2c64e18cd2c6d51db78207fe9f067a31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fifo_8h.html#a2c64e18cd2c6d51db78207fe9f067a31">myFIFOInit</a> (struct <a class="el" href="structMYFIFO.html">MYFIFO</a> *fifo)</td></tr>
-<tr class="memdesc:a2c64e18cd2c6d51db78207fe9f067a31"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function initializes the FIFO structure, setting all the variables to 0.  <a href="fifo_8h.html#a2c64e18cd2c6d51db78207fe9f067a31">More...</a><br /></td></tr>
+<tr class="memitem:a2c64e18cd2c6d51db78207fe9f067a31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fifo_8c.html#a2c64e18cd2c6d51db78207fe9f067a31">myFIFOInit</a> (struct <a class="el" href="structMYFIFO.html">MYFIFO</a> *fifo)</td></tr>
+<tr class="memdesc:a2c64e18cd2c6d51db78207fe9f067a31"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function initializes the FIFO structure, setting all the variables to 0.  <a href="fifo_8c.html#a2c64e18cd2c6d51db78207fe9f067a31">More...</a><br /></td></tr>
 <tr class="separator:a2c64e18cd2c6d51db78207fe9f067a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6434a25778fc7f1ef034a43f211791c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fifo_8h.html#ac6434a25778fc7f1ef034a43f211791c">myFIFOInsert</a> (struct <a class="el" href="structMYFIFO.html">MYFIFO</a> *fifo, uint32_t val)</td></tr>
-<tr class="memdesc:ac6434a25778fc7f1ef034a43f211791c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function adds a value in FIFO structure.  <a href="fifo_8h.html#ac6434a25778fc7f1ef034a43f211791c">More...</a><br /></td></tr>
+<tr class="memitem:ac6434a25778fc7f1ef034a43f211791c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fifo_8c.html#ac6434a25778fc7f1ef034a43f211791c">myFIFOInsert</a> (struct <a class="el" href="structMYFIFO.html">MYFIFO</a> *fifo, uint32_t val)</td></tr>
+<tr class="memdesc:ac6434a25778fc7f1ef034a43f211791c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function adds a value in FIFO structure.  <a href="fifo_8c.html#ac6434a25778fc7f1ef034a43f211791c">More...</a><br /></td></tr>
 <tr class="separator:ac6434a25778fc7f1ef034a43f211791c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeba6143357b346f56997136ae14ebd8d"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fifo_8h.html#aeba6143357b346f56997136ae14ebd8d">myFIFORemove</a> (struct <a class="el" href="structMYFIFO.html">MYFIFO</a> *fifo)</td></tr>
-<tr class="memdesc:aeba6143357b346f56997136ae14ebd8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function removes the oldest element from the FIFO structure.  <a href="fifo_8h.html#aeba6143357b346f56997136ae14ebd8d">More...</a><br /></td></tr>
+<tr class="memitem:aeba6143357b346f56997136ae14ebd8d"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fifo_8c.html#aeba6143357b346f56997136ae14ebd8d">myFIFORemove</a> (struct <a class="el" href="structMYFIFO.html">MYFIFO</a> *fifo)</td></tr>
+<tr class="memdesc:aeba6143357b346f56997136ae14ebd8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function removes the oldest element from the FIFO structure.  <a href="fifo_8c.html#aeba6143357b346f56997136ae14ebd8d">More...</a><br /></td></tr>
 <tr class="separator:aeba6143357b346f56997136ae14ebd8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0470e49cc0283c05cb090127a1575550"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fifo_8h.html#a0470e49cc0283c05cb090127a1575550">myFIFOPeep</a> (struct <a class="el" href="structMYFIFO.html">MYFIFO</a> *fifo)</td></tr>
-<tr class="memdesc:a0470e49cc0283c05cb090127a1575550"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns the oldest element from the FIFO structure, but does not remove it.  <a href="fifo_8h.html#a0470e49cc0283c05cb090127a1575550">More...</a><br /></td></tr>
+<tr class="memitem:a0470e49cc0283c05cb090127a1575550"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fifo_8c.html#a0470e49cc0283c05cb090127a1575550">myFIFOPeep</a> (struct <a class="el" href="structMYFIFO.html">MYFIFO</a> *fifo)</td></tr>
+<tr class="memdesc:a0470e49cc0283c05cb090127a1575550"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns the oldest element from the FIFO structure, but does not remove it.  <a href="fifo_8c.html#a0470e49cc0283c05cb090127a1575550">More...</a><br /></td></tr>
 <tr class="separator:a0470e49cc0283c05cb090127a1575550"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a545be93c8f87c573dbd316ee35dda76f"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fifo_8h.html#a545be93c8f87c573dbd316ee35dda76f">myFIFOSize</a> (struct <a class="el" href="structMYFIFO.html">MYFIFO</a> *fifo)</td></tr>
-<tr class="memdesc:a545be93c8f87c573dbd316ee35dda76f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns the number of elements in the FIFO structure.  <a href="fifo_8h.html#a545be93c8f87c573dbd316ee35dda76f">More...</a><br /></td></tr>
+<tr class="memitem:a545be93c8f87c573dbd316ee35dda76f"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fifo_8c.html#a545be93c8f87c573dbd316ee35dda76f">myFIFOSize</a> (struct <a class="el" href="structMYFIFO.html">MYFIFO</a> *fifo)</td></tr>
+<tr class="memdesc:a545be93c8f87c573dbd316ee35dda76f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns the number of elements in the FIFO structure.  <a href="fifo_8c.html#a545be93c8f87c573dbd316ee35dda76f">More...</a><br /></td></tr>
 <tr class="separator:a545be93c8f87c573dbd316ee35dda76f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a625ebfc98a782e08d647c37da1266c1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fifo_8h.html#a625ebfc98a782e08d647c37da1266c1a">myFIFOPrint</a> (struct <a class="el" href="structMYFIFO.html">MYFIFO</a> *fifo)</td></tr>
-<tr class="memdesc:a625ebfc98a782e08d647c37da1266c1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function prints the FIFO structure.  <a href="fifo_8h.html#a625ebfc98a782e08d647c37da1266c1a">More...</a><br /></td></tr>
+<tr class="memitem:a625ebfc98a782e08d647c37da1266c1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fifo_8c.html#a625ebfc98a782e08d647c37da1266c1a">myFIFOPrint</a> (struct <a class="el" href="structMYFIFO.html">MYFIFO</a> *fifo)</td></tr>
+<tr class="memdesc:a625ebfc98a782e08d647c37da1266c1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function prints the FIFO structure.  <a href="fifo_8c.html#a625ebfc98a782e08d647c37da1266c1a">More...</a><br /></td></tr>
 <tr class="separator:a625ebfc98a782e08d647c37da1266c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Definition of the struct data and the function prototype for FIFO. </p>
-<p>Contains two data structures: one containing the necessary variables for creating a FIFO and another containing the content of each position from FIFO. It also contains 6 functions: <a class="el" href="fifo_8h.html#a2c64e18cd2c6d51db78207fe9f067a31" title="This function initializes the FIFO structure, setting all the variables to 0.">myFIFOInit()</a>, <a class="el" href="fifo_8h.html#ac6434a25778fc7f1ef034a43f211791c" title="This function adds a value in FIFO structure.">myFIFOInsert()</a>, void <a class="el" href="fifo_8h.html#a625ebfc98a782e08d647c37da1266c1a" title="This function prints the FIFO structure.">myFIFOPrint(struct MYFIFO *fifo)</a>; <a class="el" href="fifo_8h.html#aeba6143357b346f56997136ae14ebd8d" title="This function removes the oldest element from the FIFO structure.">myFIFORemove()</a>, <a class="el" href="fifo_8h.html#a0470e49cc0283c05cb090127a1575550" title="This function returns the oldest element from the FIFO structure, but does not remove it.">myFIFOPeep()</a>, <a class="el" href="fifo_8h.html#a545be93c8f87c573dbd316ee35dda76f" title="This function returns the number of elements in the FIFO structure.">myFIFOSize()</a> and <a class="el" href="fifo_8h.html#a625ebfc98a782e08d647c37da1266c1a" title="This function prints the FIFO structure.">myFIFOPrint()</a>.</p>
+<div class="textblock"><p>Implementation of all FIFO functions. </p>
+<p>Contains the implementation of all functions declared in <a class="el" href="fifo_8h.html" title="Definition of the struct data and the function prototype for FIFO.">fifo.h</a></p>
 <dl class="section author"><dt>Author</dt><dd>Gonçalo Soares &amp; Gonçalo Rodrigues </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>14 March 2023 </dd></dl>
-<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000002">Bug:</a></b></dt><dd>No known bugs. </dd></dl>
+<dl class="bug"><dt><b><a class="el" href="bug.html#_bug000001">Bug:</a></b></dt><dd>No known bugs. </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a2c64e18cd2c6d51db78207fe9f067a31"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2c64e18cd2c6d51db78207fe9f067a31">&#9670;&nbsp;</a></span>myFIFOInit()</h2>

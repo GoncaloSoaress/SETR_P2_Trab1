@@ -3,11 +3,12 @@
  *  
  * Contains two data structures: one containing the necessary variables
  * for creating a FIFO and another containing the content of each position
- * from FIFO. It also contains 5 functions: myFIFOInit(), myFIFOInsert(),
- * myFIFORemove(), myFIFOPeep() and myFIFOSize().
+ * from FIFO. It also contains 6 functions: myFIFOInit(), myFIFOInsert(),
+ * void myFIFOPrint(struct MYFIFO *fifo);
+ * myFIFORemove(), myFIFOPeep(), myFIFOSize() and myFIFOPrint().
  * 
  * @author Gonçalo Soares & Gonçalo Rodrigues
- * @date 7 March 2023
+ * @date 14 March 2023
  * @bug No known bugs.
  */
 
@@ -79,5 +80,12 @@ uint32_t myFIFOPeep(struct MYFIFO *fifo);
  * @return The number of elements in the FIFO structure. (uint32_t)
  */
 uint32_t myFIFOSize(struct MYFIFO *fifo);
+
+/**
+ * @brief This function prints the FIFO structure.
+ * 
+ * @param fifo Pointer to the FIFO structure.
+ */
+void myFIFOPrint(struct MYFIFO *fifo);
 
 #endif
