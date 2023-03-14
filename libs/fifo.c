@@ -1,3 +1,13 @@
+/** @file fifo.c
+ * @brief Implementation of all FIFO functions
+ *  
+ * Contains the implementation of all functions declared in fifo.h
+ * 
+ * @author Gonçalo Soares & Gonçalo Rodrigues
+ * @date 14 March 2023
+ * @bug No known bugs.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
